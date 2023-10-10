@@ -1,0 +1,30 @@
+@import './common/colors.scss';
+
+// Reset CSS
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+// Custom 
+
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $background-primary;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+	width: 100vw;
+	overflow-x: hidden; 
+}

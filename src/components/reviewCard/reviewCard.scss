@@ -1,0 +1,92 @@
+@import '../../common/colors.scss';
+
+.reviewCard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $background-secondary;
+    margin: 20px 0;
+
+    .reviewCard-row {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .red {
+        color: $accent-primary;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    p {
+        width: 80%;
+        font-size: 16px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        font-size: 15px;
+        position: relative;
+        top: -4px
+    }
+
+    .star-ratings {
+        font-size: 30px;
+
+        .star {
+            margin: 0 5px;
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    .reviewCard-container {
+    
+        .reviewCard-row {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        h4 {
+            margin-bottom: 10px;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    
+        .fa-quote-left, .fa-quote-right {
+            top: -3px
+        }
+    }
+}
+
+@media (max-width: 25em) {
+    .reviewCard-container {
+    
+        h4 {
+            font-size: 22px;
+        }
+
+        .red {
+            font-size: 22px;
+        }
+    
+        .fa-quote-left, .fa-quote-right {
+            font-size: 14px;
+        }
+
+        .star-ratings {
+            font-size: 20px;
+        }
+    }
+}

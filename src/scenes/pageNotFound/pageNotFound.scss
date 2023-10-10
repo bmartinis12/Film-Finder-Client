@@ -1,0 +1,40 @@
+@import '../../common/colors.scss';
+
+.pnf-container {
+    height: calc(100vh - 105.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        color: $font-primary;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    i {
+        color: $accent-primary;
+        font-size: 50px;
+        margin: 30px 0;
+    }
+
+    a {
+        color: $font-primary;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    a:hover {
+        color: $accent-primary;
+    }
+}
+
+@media (max-width: 37.5em) {
+    .pnf-container {
+    
+        h4 {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@import '../../common/colors.scss';
+
+.register-container {
+    background-color: $accent-primary;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    h1 {
+        color: $font-primary;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    form {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .register-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70%;
+        margin: 30px auto;
+        padding: 10px 20px;
+    }
+
+    .col {
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    label {
+        width: 50%;
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    span {
+        color: $font-primary;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input {
+        padding: 5px;
+        width: 400px;
+        height: 20px;
+        outline: none;
+        border: 2px solid $font-primary;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    button {
+        align-self: center;
+        width: 120px;
+        padding: 5px;
+        background-color: $background-primary;
+        color: $font-primary;
+        font-size: 25px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 59.3em) {
+    .register-container {
+        width: 85%;
+
+        input {
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    .register-container {
+    
+        .register-row {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+        }
+    
+        span {
+            font-size: 16px;
+        }
+    
+        input {
+            width: 200px;
+            font-size: 16px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    
+    }
+}
+
+@media (max-width: 25em) {
+    .register-container {
+    
+        span {
+            font-size: 14px;
+        }
+    
+        input {
+            width: 125px;
+            font-size: 14px;
+            height: 15px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    
+    }
+}

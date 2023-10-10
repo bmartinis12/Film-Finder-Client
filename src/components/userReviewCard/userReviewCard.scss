@@ -1,0 +1,156 @@
+@import '../../common/colors.scss';
+
+.user-review-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: $background-secondary;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    .user-review-card {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+
+        h4 {
+            font-size: 30px;
+            color: $font-primary;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        img {
+            width: 200px;
+            margin: 0 20px;
+        }
+
+        .user-review-rating {
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $font-primary;
+            max-width: 60%;
+            height: 100%;
+
+            .star-ratings {
+                margin-bottom: 30px;
+
+                .star {
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 70em) {
+    .user-review-container {
+        width: 90%;
+
+        .user-review-card {
+            h4 {
+                font-size: 25px;
+            }
+            .user-review-rating {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 59.3em) {
+    .user-review-container {
+        .user-review-card {
+            h4 {
+                font-size: 22px;
+            }
+
+            .row {
+                img {
+                    width: 125px;
+                }
+
+                .star-ratings {
+                    .star {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    .user-review-container {
+        .user-review-card {
+            h4 {
+                font-size: 20px;
+            }
+
+            .row {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .star-ratings {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .user-review-rating {
+                    max-width: 90%;
+                    margin: 20px;
+                    align-items: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 25em) {
+    .user-review-container {
+        .user-review-card {
+
+            .row {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+
+                .star-ratings {
+                    width: fit-content;
+                    .star {
+                        font-size: 25px;
+                    }
+                }
+
+                .user-review-rating {
+                    max-width: 100%;
+                    margin: 20px;
+                }
+            }
+        }
+    }
+}

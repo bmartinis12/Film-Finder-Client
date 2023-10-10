@@ -1,0 +1,11 @@
+@import '../../common/colors.scss';
+
+.film-container {
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.film-error {
+    color: $font-primary;
+}

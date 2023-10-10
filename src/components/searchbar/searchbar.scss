@@ -1,0 +1,78 @@
+@import '../../common/colors.scss';
+
+.search-bar {
+    margin: 0 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        display: flex;
+        align-items: baseline;
+        input {
+            background-color: $accent-secondary;
+            color: $font-primary;
+            width: 400px;
+            border: none;
+            font-size: 16px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: $accent-secondary;
+            color: $font-primary;
+            font-size: 16px;
+        }
+    }
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $font-secondary;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: $font-secondary;
+}
+
+@media (max-width: 59.3em) {
+    .search-bar {
+        form {
+            input {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    .search-bar {
+        form {
+            input {
+                width: 250px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 25em) {
+    .search-bar {
+        margin: 3px;
+        padding: 3px;
+        form {
+            input {
+                width: 175px;
+            }
+        }
+    }
+}

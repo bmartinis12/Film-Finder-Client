@@ -1,0 +1,102 @@
+@import '../../common/colors.scss';
+
+.profile-wrapper {
+    width: 95%;
+    margin: 0 auto;
+
+    .user-container {
+        display: flex;
+        align-items: center;
+        margin: 30px 5% 40px;
+
+        img {
+            width: 30%;
+        }
+
+        .user-info {
+            margin: 0 20px;
+            color: $font-primary;
+
+            h3 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .saved-container {
+        margin: 20px auto;
+        h2 {
+            color: $font-primary;
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-left: 5%;
+        }
+    
+        .line {
+            width: 90%;
+            height: 2px;
+            margin: 0 auto 20px;
+            background-color: $accent-primary;
+        }
+
+        .no-saved-data {
+            color: $font-primary;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+}
+
+.review-container {
+    h2 {
+        color: $font-primary;
+        font-size: 25px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    .line {
+        width: 90%;
+        height: 2px;
+        margin: 0 auto 20px;
+        background-color: $accent-primary;
+    }
+
+    .no-review-data {
+        color: $font-primary;
+        text-align: center;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 37.5em) {
+    .profile-wrapper {
+    
+        .user-container {
+    
+            img {
+                width: 40%;
+            }
+    
+            .user-info {
+                margin: 0 20px;
+                color: $font-primary;
+    
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+    
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

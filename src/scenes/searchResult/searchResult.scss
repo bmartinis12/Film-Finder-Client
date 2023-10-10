@@ -1,0 +1,19 @@
+@import '../../common/colors.scss';
+
+.film-wrapper {
+    margin: 20px 0;
+
+    h2 {
+        color: $font-primary;
+        font-size: 25px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    .line {
+        width: 90%;
+        height: 2px;
+        margin: auto;
+        background-color: $accent-primary;
+    }
+}
