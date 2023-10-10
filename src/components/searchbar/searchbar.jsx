@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { removeMoviesAndShows, fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/movieSlice';
-import './searchBar.scss';
+import './searchbar.scss';
 
 export default function SearchBar() {
     const [term, setTerm] = useState('');
