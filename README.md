@@ -1,2 +1,2 @@
-# Film-Finder
+# Film-Finder-Client
 The react app for Film Finder
