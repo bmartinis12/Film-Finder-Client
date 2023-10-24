@@ -2,4 +2,4 @@
 
 The react app for Film Finder
 
-Live website: https://film-finder-68pw.onrender.com/
+Live website: https://roaring-rugelach-707508.netlify.app/
