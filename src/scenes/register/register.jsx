@@ -10,7 +10,7 @@ export default function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const registerResponse = await fetch('https://film-finder-api.onrender.com/auth/register', {
+        const registerResponse = await fetch('https://film-finder-api.adaptable.app/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
