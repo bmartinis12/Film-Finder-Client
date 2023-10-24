@@ -39,7 +39,7 @@ export default function Detail() {
             rating,
             text: review
         };
-        const response = await fetch(`https://film-finder-api.onrender.com/detail/${imdbID}/review`, {
+        const response = await fetch(`https://film-finder-api.adaptable.app/detail/${imdbID}/review`, {
             method: 'PATCH',
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ export default function Detail() {
     };
 
     const patchSaved = async () => {
-        const response = await fetch('https://film-finder-api.onrender.com/user/saved', {
+        const response = await fetch('https://film-finder-api.adaptable.app/user/saved', {
             method: 'PATCH',
             headers: {
                 Authorization: `Bearer ${token}`,
