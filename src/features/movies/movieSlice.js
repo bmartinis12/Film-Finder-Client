@@ -1,26 +1,26 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
-    const response = await fetch(`https://film-finder-api.onrender.com/search/movie/${term}`)
+    const response = await fetch(`https://film-finder-api.adaptable.app/search/movie/${term}`)
         .then(res => res.json())
         .then(data => data);
     return response;
 });
 
 export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async (term) => {
-    const response = await fetch(`https://film-finder-api.onrender.com/search/show/${term}`)
+    const response = await fetch(`https://film-finder-api.adaptable.app/search/show/${term}`)
         .then(res => res.json())
         .then(data => data);
     return response;
 });
 
 export const fetchAsyncDetail = createAsyncThunk('movies/fetchAsyncDetail', async (id) => {
-    const response = await fetch(`https://film-finder-api.onrender.com/detail/${id}`)
+    const response = await fetch(`https://film-finder-api.adaptable.app/detail/${id}`)
         .then(res => res.json())
         .then(data => data);
 
     if (response.Type === 'movie') {
-        await fetch('https://film-finder-api.onrender.com/trending/movies', {
+        await fetch('https://film-finder-api.adaptable.app/trending/movies', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ export const fetchAsyncDetail = createAsyncThunk('movies/fetchAsyncDetail', asyn
         }).then((res) => res.text())
             .then((text) => text);
     } else if (response.Type === 'series') {
-        await fetch('https://film-finder-api.onrender.com/trending/shows', {
+        await fetch('https://film-finder-api.adaptable.app/trending/shows', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ export const fetchAsyncDetail = createAsyncThunk('movies/fetchAsyncDetail', asyn
 });
 
 export const fetchAsyncReviews = createAsyncThunk('movies/fetchAsyncReviews', async (id) => {
-    const response = await fetch(`https://film-finder-api.onrender.com/detail/${id}/review`)
+    const response = await fetch(`https://film-finder-api.adaptable.app/detail/${id}/review`)
         .then(res => res.json())
         .then(data => data);
     return response;
