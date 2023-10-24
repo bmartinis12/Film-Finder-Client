@@ -13,7 +13,7 @@ export default function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const loggedInResponse = await fetch('https://film-finder-api.onrender.com/auth/login', {
+        const loggedInResponse = await fetch('https://film-finder-api.adaptable.app/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
