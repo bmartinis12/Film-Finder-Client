@@ -24,9 +24,9 @@ const Home = () => {
 
 const homeLoader = async () => {
     const [trendingMovieData, trendingShowData] = await Promise.all([
-        fetch('https://film-finder-api.onrender.com/trending/movies')
+        fetch('https://film-finder-api.adaptable.app/trending/movies')
             .then(response => response.json()),
-        fetch('https://film-finder-api.onrender.com/trending/shows')
+        fetch('https://film-finder-api.adaptable.app/trending/shows')
             .then(response => response.json())
     ]);
     return json({ trendingMovieData, trendingShowData });
