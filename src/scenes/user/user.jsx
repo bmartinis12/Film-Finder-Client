@@ -28,7 +28,7 @@ export default function UserScreen() {
     }, [location]);
 
     const getUser = async () => {
-        const response = await fetch(`https://film-finder-api.onrender.com/user/current/${user._id}`, {
+        const response = await fetch(`https://film-finder-api.adaptable.app/user/current/${user._id}`, {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${token}`,
