@@ -6,6 +6,7 @@ export default function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassowrd] = useState('');
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -29,7 +30,7 @@ export default function Register() {
         if (registed && !registed.error) {
             navigate('/login');
         } else {
-            alert(registed.error)
+            setError('Account is already in use.');
         }
     }
 
@@ -55,6 +56,9 @@ export default function Register() {
                         <input type="password" name='password' autoComplete="off" value={password} onChange={(e) => setPassowrd(e.target.value)} required />
                     </div>
                 </div>
+                {error ? (
+                    <p className='register-error'>{error}</p>
+                ) : null}
                 <button type='submit' disabled={!email || !password || !username}>Submit</button>
             </form>
         </div>
