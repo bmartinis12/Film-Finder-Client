@@ -1,5 +1,5 @@
 import './login.scss';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setLogin } from '../../features/users/userSlice';
 import { useState } from 'react';
@@ -7,9 +7,9 @@ import { useState } from 'react';
 
 export default function Login() {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [emailInput, setEmailInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,7 +27,7 @@ export default function Login() {
         const loggedIn = await loggedInResponse.json();
         setEmailInput('');
         setPasswordInput('');
-        if (loggedIn && !loggedIn.error) {
+        if (loggedIn && loggedIn.user) {
             dispatch(
                 setLogin({
                     user: loggedIn.user,
@@ -35,7 +35,7 @@ export default function Login() {
                 })
             );
         } else {
-            alert(loggedIn.error);
+            setError(loggedIn.message || loggedIn.error)
         };
     }
 
@@ -57,6 +57,9 @@ export default function Login() {
                         <input type="password" value={passwordInput} onChange={(e) => setPasswordInput(e.target.value)} name='password' autoComplete="off" required />
                     </div>
                 </div>
+                {error ? (
+                    <p className='login-error'>{error}</p>
+                ) : null}
                 <button type='submit' disabled={!emailInput || !passwordInput}>Submit</button>
             </form>
             <p>
