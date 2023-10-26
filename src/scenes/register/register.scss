@@ -63,6 +63,12 @@
         font-size: 20px;
     }
 
+    .register-error {
+        text-align: center;
+        margin: 0 0 20px;
+        color: $font-primary;
+    }
+
     button {
         align-self: center;
         width: 120px;
